@@ -28,14 +28,14 @@ public class ProdutoContoller {
     public String mostrarFormulario(Model model) {
         model.addAttribute("produto", new Produto()); //addAtribute  vai receber o model para que a gente possa usar ele na página de cadastro, ou seja, para mostrar os dados do produto que o usuário vai cadastrar
         //também deve passar o construtor do model
-        return "cadstrar"; //é o arquivo cadastrar.html que está na pasta templates, ou seja, é a página que irá aparecer para o usuário quando ele acessar a rota /cadastro
+        return "cadastrar"; //é o arquivo cadastrar.html que está na pasta templates, ou seja, é a página que irá aparecer para o usuário quando ele acessar a rota /cadastro
     }
 
     // Post -> Cadastrar um produto com seus atributos (nome e preço). Irá ocorrer quando eu clicar no botão do formulário da página cadastrar.html
     @PostMapping("/cadastro")
     public String cadastrarPrduto(Produto produto) {
         repository.save(produto);
-        return "/"; //Vai retornar para a pagina incial cadastrar.html
+        return "redirect:/"; //Vai retornar para a pagina incial cadastrar.html
     }
     
 
