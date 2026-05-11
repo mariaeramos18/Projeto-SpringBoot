@@ -8,10 +8,6 @@ import com.senac.rj.projeto.project.model.Produto;
 import com.senac.rj.projeto.project.model.ProdutoRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-
-
 
 
 @Controller
@@ -45,3 +41,5 @@ public class ProdutoContoller {
 
 
 }
+
+

@@ -10,6 +10,17 @@
     <div class="container">
         <h1>Cadastro de Produtos</h1>
         <form th:action="@{/cadastro}" method="post" th:object="${produto}">
+            
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Digite o nome do produto:">
+            <input type="text" id="nome" placeholder="Digite o nome do produto:" th:field="*{nome}">
+
+            <label for="preco">Preço:</label>
+            <input type="text" id="preco" placeholder="Digite o preço do produto:">
+            <input type="text" id="preco" placeholder="Digite o preço do produto:" th:field="*{preco}">
+
+            <button type="submit">Cadastrar</button>
+            
         </form>
         <a th:href="@{/}">Voltar para a lista de produtos</a>
         
